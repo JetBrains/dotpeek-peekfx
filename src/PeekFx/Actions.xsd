@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema targetNamespace="urn:shemas-jetbrains-com:actions-xml" elementFormDefault="qualified" xmlns="urn:shemas-jetbrains-com:actions-xml" xmlns:mstns="urn:shemas-jetbrains-com:actions-xml" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:complexType name="ActionsType">
+<xs:choice minOccurs="1" maxOccurs="unbounded">
+<xs:group ref="ActionSequenceType"></xs:group>
+<xs:element name="insert" type="InsertType"></xs:element>
+</xs:choice>
+</xs:complexType>
+
+<xs:group name="ActionSequenceType">
+<xs:choice>
+<xs:element name="action" type="ActionType"></xs:element>
+<xs:element name="action-group" type="ActionGroupType"></xs:element>
+<xs:element name="action-ref" type="ActionRefType"></xs:element>
+<xs:element name="separator" type="SeparatorType"></xs:element>
+<xs:element name="action-with-group" type="ActionWithGroupType"></xs:element>
+</xs:choice>
+</xs:group>
+
+<xs:complexType name="SeparatorType"></xs:complexType>
+
+<xs:complexType name="ActionBaseType">
+<xs:attribute name="id" type="xs:string" use="required" />
+<xs:attribute name="text" type="xs:string" use="optional" />
+<xs:attribute name="internal" type="xs:boolean" use="optional" />
+<xs:attribute name="image" type="xs:string" use="optional" />
+<xs:attribute name="vsimage" type="xs:string" use="optional" />
+<xs:attribute name="overrides" type="xs:string" use="optional" />
+<xs:attribute name="vsid" type="xs:integer" use="optional" />
+<xs:attribute name="vsToolbarLook" type="VSToolbarCaptionType" use="optional" />
+<xs:attribute name="vsMenuLook" type="VSMenuCaptionType" use="optional" />
+
+<xs:attribute name="vsFixMenuController" type="xs:boolean" use="optional" />
+<xs:attribute name="vsNoShowOnMenuController" type="xs:boolean" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="ShortcutType" mixed="true">
+<xs:attribute name="scope" type="xs:string" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="ActionType">
+<xs:complexContent>
+<xs:extension base="ActionBaseType">
+<xs:choice minOccurs="0" maxOccurs="unbounded">
+<xs:element name="shortcut" type="ShortcutType"></xs:element>
+<xs:element name="vs-shortcut" type="xs:string"></xs:element>
+</xs:choice>
+<xs:attribute name="type" type="ActionControlType" use="optional" />
+<xs:attribute name="vsauxid" type="xs:integer" use="optional" />
+<xs:attribute name="scope" type="xs:string" use="optional" />
+<xs:attribute name="handlesUpdate" type="HandlesUpdateType" use="optional" />
+<xs:attribute name="vswidth" type="xs:integer" use="optional" />
+<xs:attribute name="showConflict" type="xs:boolean" />
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:simpleType name="ActionControlType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="combobox"></xs:enumeration>
+<xs:enumeration value="checkbox"></xs:enumeration>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="VSMenuCaptionType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="textOnly"></xs:enumeration>
+<xs:enumeration value="textAndIcon"></xs:enumeration>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="VSToolbarCaptionType">
+<xs:union memberTypes="VSMenuCaptionType">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:enumeration value="iconOnly" />
+</xs:restriction>
+</xs:simpleType>
+</xs:union>
+</xs:simpleType>
+
+<xs:simpleType name="HandlesUpdateType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="light"></xs:enumeration>
+<xs:enumeration value="visibility"></xs:enumeration>
+<xs:enumeration value="full"></xs:enumeration>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="InsertPositionType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="before" />
+<xs:enumeration value="after" />
+<xs:enumeration value="first" />
+<xs:enumeration value="last" />
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="VSActionGroupType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="MenuController" />
+<xs:enumeration value="MenuControllerLatched" />
+<xs:enumeration value="ToolWindowToolbar" />
+<xs:enumeration value="ContextMenu" />
+<xs:enumeration value="Toolbar" />
+<xs:enumeration value="Menu" />
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="VSActionUIContext">
+<xs:union>
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:pattern value="\{[0-9a-fA-F\-]+\}" /> <!-- aka guid-->
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:enumeration value="UICONTEXT_NoSolution" />
+<xs:enumeration value="UICONTEXT_SolutionExists" />
+<xs:enumeration value="UICONTEXT_EmptySolution" />
+<xs:enumeration value="UICONTEXT_SolutionHasSingleProject" />
+<xs:enumeration value="UICONTEXT_SolutionHasMultipleProjects" />
+<xs:enumeration value="UICONTEXT_SolutionBuilding" />
+<xs:enumeration value="UICONTEXT_Debugging" />
+<xs:enumeration value="UICONTEXT_DesignMode" />
+<xs:enumeration value="UICONTEXT_FullScreenMode" />
+<xs:enumeration value="UICONTEXT_Dragging" />
+</xs:restriction>
+</xs:simpleType>
+</xs:union>
+</xs:simpleType>
+
+<xs:complexType name="ActionRefType">
+<xs:attribute name="id" type="xs:string" use="required" />
+<xs:attribute name="embed" type="xs:boolean" use="optional" />
+<xs:attribute name="text" type="xs:string" use="optional" /> <!-- TODO(H): seems like this text override is not applied to VSCT -->
+<xs:attribute name="internal" type="xs:boolean" use="optional" default="false" />
+<!-- TODO: Add default style to action decl and here, like icon+text or just icon or just text etc -->
+</xs:complexType>
+
+<xs:complexType name="InsertType">
+<xs:choice minOccurs="1" maxOccurs="unbounded">
+<xs:group ref="ActionSequenceType"></xs:group>
+</xs:choice>
+<xs:attribute name="group-id" type="xs:string" />
+<xs:attribute name="priority" type="xs:string" /> <!-- TODO [dsha] -->
+<xs:attribute name="vsCommandBar" type="xs:string" />
+<xs:attribute name="anchor-id" type="xs:string" />
+<xs:attribute name="position" type="InsertPositionType" />
+<xs:attribute name="internal" type="xs:boolean" use="optional" default="false" />
+</xs:complexType>
+
+<xs:complexType name="ActionGroupType">
+<xs:complexContent>
+<xs:extension base="ActionBaseType">
+<xs:choice minOccurs="0" maxOccurs="unbounded">
+<xs:group ref="ActionSequenceType"></xs:group>
+</xs:choice>
+<xs:attribute name="updatesActions" type="xs:boolean" />
+<xs:attribute name="vstype" type="VSActionGroupType" use="optional" />
+<xs:attribute name="vsUIVisibility" type="VSActionUIContext" use="optional" />
+<xs:attribute name="vsDefaultDocked" type="xs:boolean" use="optional" />
+<xs:attribute name="vsAllwaysCreate" type="xs:boolean" use="optional" />
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="ActionWithGroupType">
+<xs:complexContent>
+<xs:extension base="ActionType">
+<xs:choice minOccurs="0" maxOccurs="unbounded">
+<xs:group ref="ActionSequenceType"></xs:group>
+</xs:choice>
+<xs:attribute name="updatesActions" type="xs:boolean" />
+<xs:attribute name="vstype" type="VSActionGroupType" use="optional" />
+<xs:attribute name="vsUIVisibility" type="VSActionUIContext" use="optional" />
+<xs:attribute name="vsDefaultDocked" type="xs:boolean" use="optional" />
+<xs:attribute name="vsAllwaysCreate" type="xs:boolean" use="optional" />
+<xs:attribute name="vsid2" type="xs:integer" use="optional" />
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:element name="actions" type="ActionsType">
+<xs:annotation>
+<xs:documentation>The root element.</xs:documentation>
+</xs:annotation>
+</xs:element>
+</xs:schema>

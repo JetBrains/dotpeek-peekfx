@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{15972564-B34D-40EC-9F28-7FC9DC4FEB93}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JetBrains.DotPeek.Plugins.PeekFx</RootNamespace>
+    <AssemblyName>JetBrains.DotPeek.Plugins.PeekFx.1.0</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;JET_MODE_ASSERT;DP10</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;DP10</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ReSharperSdkTools Condition=" '$(ReSharperSdkTools)' == '' ">C:\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Tools</ReSharperSdkTools>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="dotPeek">
+      <HintPath>..\..\external\v1.0\dotPeek.exe</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.ActionManagement">
+      <HintPath>..\..\external\v1.0\JetBrains.Platform.ReSharper.ActionManagement.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.ActivityTracking">
+      <HintPath>..\..\external\v1.0\JetBrains.Platform.ReSharper.ActivityTracking.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.ComponentModel">
+      <HintPath>..\..\external\v1.0\JetBrains.Platform.ReSharper.ComponentModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.DocumentManager">
+      <HintPath>..\..\external\v1.0\JetBrains.Platform.ReSharper.DocumentManager.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.DocumentModel">
+      <HintPath>..\..\external\v1.0\JetBrains.Platform.ReSharper.DocumentModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.IDE">
+      <HintPath>..\..\external\v1.0\JetBrains.Platform.ReSharper.IDE.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.Interop.WinApi">
+      <HintPath>..\..\external\v1.0\JetBrains.Platform.ReSharper.Interop.WinApi.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.Metadata">
+      <HintPath>..\..\external\v1.0\JetBrains.Platform.ReSharper.Metadata.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.ProjectModel">
+      <HintPath>..\..\external\v1.0\JetBrains.Platform.ReSharper.ProjectModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.Shell">
+      <HintPath>..\..\external\v1.0\JetBrains.Platform.ReSharper.Shell.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.Symbols">
+      <HintPath>..\..\external\v1.0\JetBrains.Platform.ReSharper.Symbols.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.TextControl">
+      <HintPath>..\..\external\v1.0\JetBrains.Platform.ReSharper.TextControl.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.UI">
+      <HintPath>..\..\external\v1.0\JetBrains.Platform.ReSharper.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.UI.Standalone">
+      <HintPath>..\..\external\v1.0\JetBrains.Platform.ReSharper.UI.Standalone.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.Util">
+      <HintPath>..\..\external\v1.0\JetBrains.Platform.ReSharper.Util.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Features.Browsing">
+      <HintPath>..\..\external\v1.0\JetBrains.ReSharper.Features.Browsing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NuGet.Core, Version=2.5.40416.9020, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NuGet.Core.2.5.0\lib\net40-Client\NuGet.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Handlers\DotNet\OpenFramework20X64.cs" />
+    <Compile Include="Handlers\DotNet\OpenFramework20X86.cs" />
+    <Compile Include="Handlers\DotNet\OpenFramework30X64.cs" />
+    <Compile Include="Handlers\DotNet\OpenFramework30X86.cs" />
+    <Compile Include="Handlers\DotNet\OpenFramework35X64.cs" />
+    <Compile Include="Handlers\DotNet\OpenFramework35X86.cs" />
+    <Compile Include="Handlers\DotNet\OpenFramework40X64.cs" />
+    <Compile Include="Handlers\DotNet\OpenFramework40X86.cs" />
+    <Compile Include="Handlers\DotNet\OpenFramework45X64.cs" />
+    <Compile Include="Handlers\DotNet\OpenFramework45X86.cs" />
+    <Compile Include="Handlers\OpenFrameworkHandlerBase.cs" />
+    <Compile Include="Handlers\OpenWinMd80.cs" />
+    <Compile Include="Handlers\Silverlight\OpenSilverlight3X86.cs" />
+    <Compile Include="Handlers\Silverlight\OpenSilverlight4X86.cs" />
+    <Compile Include="Handlers\Silverlight\OpenSilverlight5X86.cs" />
+    <Compile Include="Infrastructure\CurrentSystem.cs" />
+    <Compile Include="Infrastructure\FrameworkDefinitions\DotNet\DotNetFramework.cs" />
+    <Compile Include="Infrastructure\FrameworkDefinitions\DotNet\DotNetFramework20.cs" />
+    <Compile Include="Infrastructure\FrameworkDefinitions\DotNet\DotNetFramework20X64.cs" />
+    <Compile Include="Infrastructure\FrameworkDefinitions\DotNet\DotNetFramework20X86.cs" />
+    <Compile Include="Infrastructure\FrameworkDefinitions\DotNet\DotNetFramework30.cs" />
+    <Compile Include="Infrastructure\FrameworkDefinitions\DotNet\DotNetFramework30X64.cs" />
+    <Compile Include="Infrastructure\FrameworkDefinitions\DotNet\DotNetFramework30X86.cs" />
+    <Compile Include="Infrastructure\FrameworkDefinitions\DotNet\DotNetFramework35.cs" />
+    <Compile Include="Infrastructure\FrameworkDefinitions\DotNet\DotNetFramework35X64.cs" />
+    <Compile Include="Infrastructure\FrameworkDefinitions\DotNet\DotNetFramework35X86.cs" />
+    <Compile Include="Infrastructure\FrameworkDefinitions\DotNet\DotNetFramework40.cs" />
+    <Compile Include="Infrastructure\FrameworkDefinitions\DotNet\DotNetFramework40X64.cs" />
+    <Compile Include="Infrastructure\FrameworkDefinitions\DotNet\DotNetFramework40X86.cs" />
+    <Compile Include="Infrastructure\FrameworkDefinitions\DotNet\DotNetFramework45X64.cs" />
+    <Compile Include="Infrastructure\FrameworkDefinitions\DotNet\DotNetFramework45X86.cs" />
+    <Compile Include="Infrastructure\FrameworkDefinitions\FrameworkWinMd80.cs" />
+    <Compile Include="Infrastructure\FrameworkDefinitions\IFramework.cs" />
+    <Compile Include="Infrastructure\FrameworkDefinitions\Silverlight\SilverlightFramework.cs" />
+    <Compile Include="Infrastructure\FrameworkDefinitions\Silverlight\SilverlightFramework3X86.cs" />
+    <Compile Include="Infrastructure\FrameworkDefinitions\Silverlight\SilverlightFramework4X86.cs" />
+    <Compile Include="Infrastructure\FrameworkDefinitions\Silverlight\SilverlightFramework5X86.cs" />
+    <Compile Include="Infrastructure\FrameworkVersions.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\PluginInfo.1.0.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Actions.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Actions.1.0.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <Import Project="$(ReSharperSdkTools)\MSBuild\JetBrains.Build.Platform.ThemedIconsConverter.Targets" />
+  <Import Project="plugin-debugger.1.0.proj" />
+</Project>
