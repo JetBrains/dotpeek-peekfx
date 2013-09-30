@@ -1,6 +1,8 @@
-# dotpeek-PeekFx
+# dotpeek-peekfx
 
 PeekFx allows loading and decompilation of groups of .NET framework assemblies in dotPeek. It supports dotPeek 1.0 and 1.1.
+
+![dotPeek](docs/images/menu.png)
 
 ## What does it do? ##
 
