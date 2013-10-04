@@ -124,21 +124,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Handlers\DotNet\OpenFramework20X64.cs" />
-    <Compile Include="Handlers\DotNet\OpenFramework20X86.cs" />
-    <Compile Include="Handlers\DotNet\OpenFramework30X64.cs" />
-    <Compile Include="Handlers\DotNet\OpenFramework30X86.cs" />
-    <Compile Include="Handlers\DotNet\OpenFramework35X64.cs" />
-    <Compile Include="Handlers\DotNet\OpenFramework35X86.cs" />
-    <Compile Include="Handlers\DotNet\OpenFramework40X64.cs" />
-    <Compile Include="Handlers\DotNet\OpenFramework40X86.cs" />
-    <Compile Include="Handlers\DotNet\OpenFramework45X64.cs" />
-    <Compile Include="Handlers\DotNet\OpenFramework45X86.cs" />
-    <Compile Include="Handlers\OpenFrameworkHandlerBase.cs" />
-    <Compile Include="Handlers\OpenWinMd80.cs" />
-    <Compile Include="Handlers\Silverlight\OpenSilverlight3X86.cs" />
-    <Compile Include="Handlers\Silverlight\OpenSilverlight4X86.cs" />
-    <Compile Include="Handlers\Silverlight\OpenSilverlight5X86.cs" />
+    <Compile Include="Handlers\OpenFrameworkHandler.cs" />
     <Compile Include="Infrastructure\FrameworkDefinitions\DotNet\DotNetFramework40X64.cs" />
     <Compile Include="Infrastructure\FrameworkDefinitions\DotNet\DotNetFramework20.cs" />
     <Compile Include="Infrastructure\FrameworkDefinitions\DotNet\DotNetFramework20X64.cs" />
@@ -155,12 +141,14 @@
     <Compile Include="Infrastructure\FrameworkDefinitions\DotNet\DotNetFramework40X86.cs" />
     <Compile Include="Infrastructure\FrameworkDefinitions\DotNet\DotNetFramework45X64.cs" />
     <Compile Include="Infrastructure\FrameworkDefinitions\DotNet\DotNetFramework45X86.cs" />
+    <Compile Include="Infrastructure\FrameworkDefinitions\NotImplementedFramework.cs" />
     <Compile Include="Infrastructure\FrameworkDefinitions\Silverlight\SilverlightFramework.cs" />
     <Compile Include="Infrastructure\FrameworkDefinitions\Silverlight\SilverlightFramework3X86.cs" />
     <Compile Include="Infrastructure\FrameworkDefinitions\Silverlight\SilverlightFramework4X86.cs" />
     <Compile Include="Infrastructure\FrameworkDefinitions\Silverlight\SilverlightFramework5X86.cs" />
-    <Compile Include="Infrastructure\FrameworkDefinitions\FrameworkWinMd80.cs" />
     <Compile Include="Infrastructure\FrameworkDefinitions\IFramework.cs" />
+    <Compile Include="Infrastructure\FrameworkDefinitions\WinMd80Framework.cs" />
+    <Compile Include="Infrastructure\FrameworkFactory.cs" />
     <Compile Include="Infrastructure\FrameworkVersions.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

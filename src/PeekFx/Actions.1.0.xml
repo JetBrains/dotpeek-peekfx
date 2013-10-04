@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <actions>
-  <action id="PeekFx.OpenFx.Net20x86" text=".NET 2.0 - x86" />
-  <action id="PeekFx.OpenFx.Net20x64" text=".NET 2.0 - x64" />
-  <action id="PeekFx.OpenFx.Net30x86" text=".NET 3.0 - x86" />
-  <action id="PeekFx.OpenFx.Net30x64" text=".NET 3.0 - x64" />
-  <action id="PeekFx.OpenFx.Net35x86" text=".NET 3.5 - x86" />
-  <action id="PeekFx.OpenFx.Net35x64" text=".NET 3.5 - x64" />
-  <action id="PeekFx.OpenFx.Net40x86" text=".NET 4.0 - x86" />
-  <action id="PeekFx.OpenFx.Net40x64" text=".NET 4.0 - x64" />
-  <action id="PeekFx.OpenFx.Net45x86" text=".NET 4.5 - x86" />
-  <action id="PeekFx.OpenFx.Net45x64" text=".NET 4.5 - x64" />
-  <action id="PeekFx.OpenFx.SL3x86" text="Silverlight 3" />
-  <action id="PeekFx.OpenFx.SL4x86" text="Silverlight 4" />
-  <action id="PeekFx.OpenFx.SL5x86" text="Silverlight 5" />
-  <action id="PeekFx.OpenFx.WinMd80" text="Windows Metadata Files (WinRT)" />
+  <action id="PeekFx.OpenFx.DotNetFramework20X86" text=".NET 2.0 - x86" />
+  <action id="PeekFx.OpenFx.DotNetFramework20X64" text=".NET 2.0 - x64" />
+  <action id="PeekFx.OpenFx.DotNetFramework30X86" text=".NET 3.0 - x86" />
+  <action id="PeekFx.OpenFx.DotNetFramework30X64" text=".NET 3.0 - x64" />
+  <action id="PeekFx.OpenFx.DotNetFramework35X86" text=".NET 3.5 - x86" />
+  <action id="PeekFx.OpenFx.DotNetFramework35X64" text=".NET 3.5 - x64" />
+  <action id="PeekFx.OpenFx.DotNetFramework40X86" text=".NET 4.0 - x86" />
+  <action id="PeekFx.OpenFx.DotNetFramework40X64" text=".NET 4.0 - x64" />
+  <action id="PeekFx.OpenFx.DotNetFramework45X86" text=".NET 4.5 - x86" />
+  <action id="PeekFx.OpenFx.DotNetFramework45X64" text=".NET 4.5 - x64" />
+  <action id="PeekFx.OpenFx.SilverlightFramework3X86" text="Silverlight 3" />
+  <action id="PeekFx.OpenFx.SilverlightFramework4X86" text="Silverlight 4" />
+  <action id="PeekFx.OpenFx.SilverlightFramework5X86" text="Silverlight 5" />
+  <action id="PeekFx.OpenFx.WinMd80Framework" text="Windows Metadata Files (WinRT)" />
 
   <insert group-id="DotPeek.File" position="after" anchor-id="OpenAssemblyList">
     <action-group id="PeekFx.OpenFx" text="Open Framework Assemblies">
       <action-group id="PeekFx.OpenFx.Net" text=".NET Framework">
-        <action-ref id="PeekFx.OpenFx.Net20x86" />
-        <action-ref id="PeekFx.OpenFx.Net20x64" />
+        <action-ref id="PeekFx.OpenFx.DotNetFramework20X86" />
+        <action-ref id="PeekFx.OpenFx.DotNetFramework20X64" />
         <separator />
-        <action-ref id="PeekFx.OpenFx.Net30x86" />
-        <action-ref id="PeekFx.OpenFx.Net30x64" />
+        <action-ref id="PeekFx.OpenFx.DotNetFramework30X86" />
+        <action-ref id="PeekFx.OpenFx.DotNetFramework30X64" />
         <separator />
-        <action-ref id="PeekFx.OpenFx.Net35x86" />
-        <action-ref id="PeekFx.OpenFx.Net35x64" />
+        <action-ref id="PeekFx.OpenFx.DotNetFramework35X86" />
+        <action-ref id="PeekFx.OpenFx.DotNetFramework35X64" />
         <separator />
-        <action-ref id="PeekFx.OpenFx.Net40x86" />
-        <action-ref id="PeekFx.OpenFx.Net40x64" />
+        <action-ref id="PeekFx.OpenFx.DotNetFramework40X86" />
+        <action-ref id="PeekFx.OpenFx.DotNetFramework40X64" />
         <separator />
-        <action-ref id="PeekFx.OpenFx.Net45x86" />
-        <action-ref id="PeekFx.OpenFx.Net45x64" />
+        <action-ref id="PeekFx.OpenFx.DotNetFramework45X86" />
+        <action-ref id="PeekFx.OpenFx.DotNetFramework45X64" />
       </action-group>
 
       <action-group id="PeekFx.OpenFx.SL" text="Silverlight">
-        <action-ref id="PeekFx.OpenFx.SL3x86" />
-        <action-ref id="PeekFx.OpenFx.SL4x86" />
-        <action-ref id="PeekFx.OpenFx.SL5x86" />
+        <action-ref id="PeekFx.OpenFx.SilverlightFramework3X86" />
+        <action-ref id="PeekFx.OpenFx.SilverlightFramework4X86" />
+        <action-ref id="PeekFx.OpenFx.SilverlightFramework5X86" />
       </action-group>
 
-      <action-ref id="PeekFx.OpenFx.WinMd80" />
+      <action-ref id="PeekFx.OpenFx.WinMd80Framework" />
     </action-group>
   </insert>
 </actions>
