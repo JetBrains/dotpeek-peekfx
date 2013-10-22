@@ -3,7 +3,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <StartAction>Program</StartAction>
     <StartProgram>C:\Program Files %28x86%29\JetBrains\dotPeek\v1.0\dotPeek.exe</StartProgram>
-    <StartArguments>/Plugin JetBrains.DotPeek.Plugins.PeekFx.1.0.dll /Internal</StartArguments>
+    <StartArguments>/Plugin JetBrains.DotPeek.Plugins.Console.1.0.dll /Internal</StartArguments>
     <StartWorkingDirectory>$(MSBuildProjectDirectory)\bin\Debug\</StartWorkingDirectory>
   </PropertyGroup>
   <PropertyGroup>
@@ -11,8 +11,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <PostBuildEvent>mkdir $(LOCALAPPDATA)\JetBrains\dotPeek\v1.0\plugins 
-xcopy /Y $(TargetDir)*1.0.dll $(LOCALAPPDATA)\JetBrains\dotPeek\v1.0\plugins 
-xcopy /Y $(TargetDir)NuGet.Core.dll $(LOCALAPPDATA)\JetBrains\dotPeek\v1.0\plugins 
+xcopy /Y $(TargetDir)*1.0.dll $(LOCALAPPDATA)\JetBrains\dotPeek\v1.0\plugins
 xcopy /Y $(TargetDir)*1.0.pdb $(LOCALAPPDATA)\JetBrains\dotPeek\v1.0\plugins</PostBuildEvent>
   </PropertyGroup>
 </Project>
