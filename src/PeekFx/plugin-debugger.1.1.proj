@@ -3,7 +3,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <StartAction>Program</StartAction>
     <StartProgram>C:\Program Files %28x86%29\JetBrains\dotPeek\v1.1\Bin\dotPeek32.exe</StartProgram>
-    <StartArguments>/Plugin JetBrains.DotPeek.Plugins.Console.1.1.dll /Internal</StartArguments>
+    <StartArguments>/Internal /Plugin=JetBrains.DotPeek.Plugins.Console.1.1.dll</StartArguments>
     <StartWorkingDirectory>$(MSBuildProjectDirectory)\bin\Debug\</StartWorkingDirectory>
   </PropertyGroup>
   <PropertyGroup>
