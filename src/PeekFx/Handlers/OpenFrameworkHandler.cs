@@ -66,8 +66,7 @@ namespace JetBrains.DotPeek.Plugins.PeekFx.Handlers
                 return;
             }
 
-            var explorerManager = SolutionEx.GetComponent<IAssemblyExplorerManager>(solution);
-            explorerManager.AddItemsByPath(DotNetFramework.GetAssemblies().Select(p => new FileSystemPath(p)).ToArray());
+            assemblyExplorerManager.AddItemsByPath(DotNetFramework.GetAssemblies().Select(p => new FileSystemPath(p)).ToArray());
         }
     }
 }
