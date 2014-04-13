@@ -30,3 +30,9 @@ REM Build DotPeek 1.1 version
 mkdir install\PeekFx.1.1 2> NUL
 copy /y src\PeekFx\bin\Release\*.1.1.dll install\PeekFx.1.1\
 copy /y src\PeekFx\bin\Release\NuGet.Core.dll install\PeekFx.1.1\
+
+REM Build DotPeek 1.2 version
+%WINDIR%\Microsoft.NET\Framework\v4.0.30319\msbuild src\PeekFx.1.2.sln /p:Configuration="%config%" /t:Clean,Rebuild /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
+mkdir install\PeekFx.1.2 2> NUL
+copy /y src\PeekFx\bin\Release\*.1.2.dll install\PeekFx.1.2\
+copy /y src\PeekFx\bin\Release\NuGet.Core.dll install\PeekFx.1.2\

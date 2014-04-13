@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{15972564-B34D-40F2-9EC8-7FCB939DC4FE}</ProjectGuid>
+    <ProjectGuid>{AA123564-B34D-40F2-9EC8-7FCB939DC4FE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>JetBrains.DotPeek.Plugins.PeekFx</RootNamespace>
-    <AssemblyName>JetBrains.DotPeek.Plugins.PeekFx.1.1</AssemblyName>
+    <AssemblyName>JetBrains.DotPeek.Plugins.PeekFx.1.2</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -21,7 +21,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>JET_MODE_ASSERT;DEBUG;TRACE;DP11</DefineConstants>
+    <DefineConstants>JET_MODE_ASSERT;DEBUG;TRACE;DP12</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
@@ -30,7 +30,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE;DP11</DefineConstants>
+    <DefineConstants>TRACE;DP12</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
@@ -41,67 +41,67 @@
   <ItemGroup>
     <Reference Include="Accessibility" />
     <Reference Include="dotPeek">
-      <HintPath>..\..\external\v1.1\dotPeek.dll</HintPath>
+      <HintPath>..\..\external\v1.2\dotPeek.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="JetBrains.Platform.ReSharper.ActivityTracking">
-      <HintPath>..\..\external\v1.1\JetBrains.Platform.ReSharper.ActivityTracking.dll</HintPath>
+      <HintPath>..\..\external\v1.2\JetBrains.Platform.ReSharper.ActivityTracking.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="JetBrains.Platform.ReSharper.ComponentModel">
-      <HintPath>..\..\external\v1.1\JetBrains.Platform.ReSharper.ComponentModel.dll</HintPath>
+      <HintPath>..\..\external\v1.2\JetBrains.Platform.ReSharper.ComponentModel.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="JetBrains.Platform.ReSharper.DocumentManager">
-      <HintPath>..\..\external\v1.1\JetBrains.Platform.ReSharper.DocumentManager.dll</HintPath>
+      <HintPath>..\..\external\v1.2\JetBrains.Platform.ReSharper.DocumentManager.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="JetBrains.Platform.ReSharper.DocumentModel">
-      <HintPath>..\..\external\v1.1\JetBrains.Platform.ReSharper.DocumentModel.dll</HintPath>
+      <HintPath>..\..\external\v1.2\JetBrains.Platform.ReSharper.DocumentModel.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="JetBrains.Platform.ReSharper.IDE">
-      <HintPath>..\..\external\v1.1\JetBrains.Platform.ReSharper.IDE.dll</HintPath>
+      <HintPath>..\..\external\v1.2\JetBrains.Platform.ReSharper.IDE.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="JetBrains.Platform.ReSharper.Interop.WinApi">
-      <HintPath>..\..\external\v1.1\JetBrains.Platform.ReSharper.Interop.WinApi.dll</HintPath>
+      <HintPath>..\..\external\v1.2\JetBrains.Platform.ReSharper.Interop.WinApi.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="JetBrains.Platform.ReSharper.Metadata">
-      <HintPath>..\..\external\v1.1\JetBrains.Platform.ReSharper.Metadata.dll</HintPath>
+      <HintPath>..\..\external\v1.2\JetBrains.Platform.ReSharper.Metadata.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="JetBrains.Platform.ReSharper.ProjectModel">
-      <HintPath>..\..\external\v1.1\JetBrains.Platform.ReSharper.ProjectModel.dll</HintPath>
+      <HintPath>..\..\external\v1.2\JetBrains.Platform.ReSharper.ProjectModel.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="JetBrains.Platform.ReSharper.Shell">
-      <HintPath>..\..\external\v1.1\JetBrains.Platform.ReSharper.Shell.dll</HintPath>
+      <HintPath>..\..\external\v1.2\JetBrains.Platform.ReSharper.Shell.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="JetBrains.Platform.ReSharper.Symbols">
-      <HintPath>..\..\external\v1.1\JetBrains.Platform.ReSharper.Symbols.dll</HintPath>
+      <HintPath>..\..\external\v1.2\JetBrains.Platform.ReSharper.Symbols.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="JetBrains.Platform.ReSharper.TextControl">
-      <HintPath>..\..\external\v1.1\JetBrains.Platform.ReSharper.TextControl.dll</HintPath>
+      <HintPath>..\..\external\v1.2\JetBrains.Platform.ReSharper.TextControl.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="JetBrains.Platform.ReSharper.UI">
-      <HintPath>..\..\external\v1.1\JetBrains.Platform.ReSharper.UI.dll</HintPath>
+      <HintPath>..\..\external\v1.2\JetBrains.Platform.ReSharper.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="JetBrains.Platform.ReSharper.UI.Standalone">
-      <HintPath>..\..\external\v1.1\JetBrains.Platform.ReSharper.UI.Standalone.dll</HintPath>
+      <HintPath>..\..\external\v1.2\JetBrains.Platform.ReSharper.UI.Standalone.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="JetBrains.Platform.ReSharper.Util">
-      <HintPath>..\..\external\v1.1\JetBrains.Platform.ReSharper.Util.dll</HintPath>
+      <HintPath>..\..\external\v1.2\JetBrains.Platform.ReSharper.Util.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="JetBrains.ReSharper.Features.Browsing">
-      <HintPath>..\..\external\v1.1\JetBrains.ReSharper.Features.Browsing.dll</HintPath>
+      <HintPath>..\..\external\v1.2\JetBrains.ReSharper.Features.Browsing.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="PresentationCore" />
@@ -152,7 +152,7 @@
     <Compile Include="Infrastructure\FrameworkVersions.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\PluginInfo.1.1.cs" />
+    <Compile Include="Properties\PluginInfo.1.2.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Actions.xml">
@@ -163,17 +163,17 @@
     <None Include="Actions.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="packages.PeekFx.1.1.config" />
+    <None Include="packages.PeekFx.1.2.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(ReSharperSdkTools)\MSBuild\JetBrains.Build.Platform.ThemedIconsConverter.Targets" />
-  <Import Project="plugin-debugger.1.1.proj" />
+  <Import Project="plugin-debugger.1.2.proj" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\JetBrains.ReSharper.SDK.8.0.1243\build\JetBrains.ReSharper.SDK.Props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\JetBrains.ReSharper.SDK.8.0.1243\build\JetBrains.ReSharper.SDK.Props'))" />
-    <Error Condition="!Exists('..\packages\JetBrains.ReSharper.SDK.8.0.1243\build\JetBrains.ReSharper.SDK.Targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\JetBrains.ReSharper.SDK.8.0.1243\build\JetBrains.ReSharper.SDK.Targets'))" />
+    <Error Condition="!Exists('..\packages\JetBrains.ReSharper.SDK.8.2.1158\build\JetBrains.ReSharper.SDK.Props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\JetBrains.ReSharper.SDK.8.2.1158\build\JetBrains.ReSharper.SDK.Props'))" />
+    <Error Condition="!Exists('..\packages\JetBrains.ReSharper.SDK.8.2.1158\build\JetBrains.ReSharper.SDK.Targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\JetBrains.ReSharper.SDK.8.2.1158\build\JetBrains.ReSharper.SDK.Targets'))" />
   </Target>
 </Project>
