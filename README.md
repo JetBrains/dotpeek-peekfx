@@ -28,7 +28,7 @@ If you wish to just install a copy of the plugins without building yourself:
 
 - Download the latest zip file: [PeekFx-1.0.zip](https://github.com/JetBrains/dotpeek-PeekFx/raw/downloads/downloads/PeekFx-1.0.zip)
 - Extract everything
-- Run the appropriate batch file for your version of dotPeek, e.g. Install-PeekFx.1.0.bat for dotPeek 1.0, or Install-PeekFx.1.1.bat for dotPeek 1.1.
+- Run the appropriate batch file for your version of dotPeek, e.g. Install-PeekFx.1.0.bat for dotPeek 1.0, or Install-PeekFx.1.1.bat for dotPeek 1.1, or Install-PeekFx.1.1.bat for dotPeek 1.2.
 
 ## Building ##
 
