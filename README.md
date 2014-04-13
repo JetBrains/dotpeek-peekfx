@@ -1,6 +1,6 @@
 # dotpeek-peekfx
 
-PeekFx allows loading and decompilation of groups of .NET framework assemblies in dotPeek. It supports dotPeek 1.0 and 1.1.
+PeekFx allows loading and decompilation of groups of .NET framework assemblies in dotPeek. It supports dotPeek 1.0, 1.1 and 1.2.
 
 ![dotPeek](docs/images/menu.png)
 
@@ -28,13 +28,13 @@ If you wish to just install a copy of the plugins without building yourself:
 
 - Download the latest zip file: [PeekFx-1.0.zip](https://github.com/JetBrains/dotpeek-PeekFx/raw/downloads/downloads/PeekFx-1.0.zip)
 - Extract everything
-- Run the appropriate batch file for your version of dotPeek, e.g. Install-PeekFx.1.0.bat for dotPeek 1.0, or Install-PeekFx.1.1.bat for dotPeek 1.1, or Install-PeekFx.1.1.bat for dotPeek 1.2.
+- Run the appropriate batch file for your version of dotPeek, e.g. Install-PeekFx.1.0.bat for dotPeek 1.0, or Install-PeekFx.1.1.bat for dotPeek 1.1, or Install-PeekFx.1.2.bat for dotPeek 1.2.
 
 ## Building ##
 
 To build the source, you need the [ReSharper SDK](http://www.jetbrains.com/resharper/download/index.html) installed .
 
-The build.bat file in this repository builds the plugin from scratch. Note that a folder _external_ containing subdirectories _v1.0_ and _v1.1_ must be created and dotPeek assembly files copied in to create the build.
+The build.bat file in this repository builds the plugin from scratch. Note that a folder _external_ containing subdirectories _v1.0_, _v1.1_ and _v1.2_ must be created and dotPeek assembly files copied in to create the build.
 
 If you only wish to target a specific version of dotPeek, open the appropriate solution file from the repository.
 
