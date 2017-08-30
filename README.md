@@ -1,3 +1,5 @@
+[![obsolete project](http://jb.gg/badges/obsolete-flat-square.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
+
 # dotpeek-peekfx
 
 PeekFx allows loading and decompilation of groups of .NET framework assemblies in dotPeek. It supports dotPeek 1.0, 1.1 and 1.2.
